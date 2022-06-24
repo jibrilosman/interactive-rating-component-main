@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-Grey: hsl(217, 12%, 63%);
+    --medium-Grey: hsl(216, 12%, 54%);
+    --dark-Blue: hsl(213, 19%, 18%);
+    --very-Dark-Blue: hsl(216, 12%, 8%);
+}
+body {
+    width: 100%;
+    height: auto;
+    background: var(--very-Dark-Blue);
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    overflow-x: hidden;
+}
+.container {
+    width: 80%;
+    height: auto;
+    background: hsl(213, 25%, 14%);
+    margin: 5rem auto;
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+.icon-star {
+    width: 50px;
+    height: 50px;
+    background: hsl(210, 22%, 18%);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.text {
+    margin: 30px;
+}
+   .text > h1 {
+    font-weight: 700;
+    color: var(--white);
+   }
+   .text > p {
+    color: var(--light-Grey);
+   }
+
+.btn-section {
+    width: 100%;
+    display: flex;
+    justify-content: center
+} 
+.rating {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    margin-left: 7px;
+    margin-right: 13px;
+    background: hsl(210, 22%, 18%);
+    color: var(--white);
+    box-shadow: 1px 1px 20px hsl(210, 22%, 18%);
+    cursor: pointer;
+}  
+.rating:focus {
+    background: var(--light-Grey);
+    color: var(--white);
+}
+
+.btn-section > button:hover {
+    background: var(--orange); 
+    transform: translateY(2px); 
+    transition: all 0.3s ease-in-out;
+}
+.submit-section {
+    width: 100%;
+    margin: 0 auto;
+}
+    .submit-section > button {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Overpass', sans-serif;
+        background: var(--orange);
+        color: var(--white);
+        border: 0;
+        border-radius: 2rem;
+        cursor: pointer;
+    }
+    .submit-section > button:hover {
+        background: var(--white);
+        color: var(--orange);
+        transform: translateY(2px); 
+        transition: all 0.3s ease-in-out;
+    }
+    
+/* ************************ */
+/* thank you state styles */
+/* ************************ */
+
+.thank-section {
+    width: 80%;
+    height: 75vh;
+    background: hsl(213, 25%, 14%);
+    margin: 2rem auto;
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 7%;
+    left: 12%;
+}
+.thank-section > h1,
+.thank-section > p {
+    padding: 0 25px;
+}
+.thank-section > h1 {
+    font-weight: 700;
+    color: var(--white);
+}
+.thank-section > p {
+    color: var(--light-Grey);
+}
+label {
+    width: 200px;
+    height: 30px;
+    color: var(--orange);
+    background-color: hsl(210, 22%, 18%);
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.attribution { 
+    font-size: 14px;
+     text-align: center; 
+    }
+.attribution a {
+     color: hsl(0, 100%, 50%);
+     }
+.attribution a:visited {
+    color: hsl(0, 100%, 50%);
+}
+
+
+/* ************************ */
+/* media query styles */
+/* ************************ */
+
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 27%;
+    }
+    .thank-section {
+        width: 27%;
+        height: 70vh;
+        top: 6%;
+        left: 37%;
+    }
+    .rating {
+        margin-right: 19px;
+    }
+}
